@@ -1,64 +1,114 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  min-height: 100vh;
+  background-color: #14110f;
+  color: #ede6d8;
   line-height: 1.6;
 }
 
 h1 {
   text-align: center;
-  margin: 20px 0;
+  margin: 40px 0 24px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #ede6d8;
 }
 
 /* Input Field and Button */
-#city-input {
+#state-input {
   display: block;
-  margin: 20px auto;
-  padding: 10px;
+  margin: 0 auto 12px;
+  padding: 10px 14px;
   width: 80%;
-  max-width: 400px;
+  max-width: 260px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  font-family: inherit;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: #0f0d0b;
+  color: #ede6d8;
+  border: 1px solid rgba(201, 162, 75, 0.35);
   border-radius: 4px;
 }
 
-#fetch-weather {
+#state-input:focus {
+  outline: none;
+  border-color: #c9a24b;
+  box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.15);
+}
+
+#fetch-alerts {
   display: block;
   margin: 10px auto;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  background: linear-gradient(180deg, #c9a24b 0%, #8a723a 100%);
+  color: #1a1510;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-#fetch-weather:hover {
-  background-color: #0056b3;
+#fetch-alerts:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(201, 162, 75, 0.25);
 }
 
-/* Weather Display Section */
-#weather-display {
+/* Alerts Display Section */
+#alerts-display {
   margin: 20px auto;
   padding: 10px;
   width: 90%;
   max-width: 600px;
-  background: #fff;
-  border: 1px solid #ccc;
+  background: #1c1815;
+  border: 1px solid rgba(201, 162, 75, 0.25);
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+#alerts-display:empty {
+  display: none;
+}
+
+#alerts-summary {
+  color: #c9a24b;
+  font-size: 1.05rem;
+  margin: 0 0 12px;
+}
+
+#alerts-display ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#alerts-display li {
+  background: rgba(201, 162, 75, 0.06);
+  border-left: 3px solid #8a723a;
+  padding: 10px 14px;
   border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Error Message */
 #error-message {
-  color: red;
-  font-weight: bold;
+  color: #e0a3a3;
+  font-weight: 600;
   text-align: center;
-  margin-top: 10px;
+  margin: 16px auto;
+  padding: 10px 16px;
+  width: 80%;
+  max-width: 480px;
+  background: rgba(161, 61, 61, 0.12);
+  border: 1px solid rgba(161, 61, 61, 0.4);
+  border-radius: 6px;
 }
 
 /* Hidden Class for Error Handling */
